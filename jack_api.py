@@ -1,4 +1,4 @@
-# Jack AI API - FIXED VERSION
+# Jack AI API - FIXED VERSION WITH CAMERA SAVE
 # Properly returns URL and query data
 # pip install flask flask-cors
 
@@ -138,7 +138,7 @@ class JackAssistant:
         """
         cmd = command.lower().strip()
         
-        # Camera commands
+        # Camera commands - WITH SAVE FUNCTIONALITY
         if "camera" in cmd:
             if "open" in cmd or "start" in cmd:
                 return {
@@ -150,6 +150,21 @@ class JackAssistant:
                     "action": "CLOSE_CAMERA",
                     "message": "Closing camera"
                 }
+            # NEW: Capture/Take photo command
+            elif "capture" in cmd or "take" in cmd or "click" in cmd or "photo" in cmd or "picture" in cmd:
+                return {
+                    "action": "CAPTURE_PHOTO",
+                    "message": "Capturing photo and saving to gallery",
+                    "save_to_gallery": True
+                }
+        
+        # NEW: Direct photo capture commands
+        if ("take" in cmd or "click" in cmd or "capture" in cmd) and ("photo" in cmd or "picture" in cmd or "pic" in cmd):
+            return {
+                "action": "CAPTURE_PHOTO",
+                "message": "Capturing photo and saving to gallery",
+                "save_to_gallery": True
+            }
         
         # YouTube - specific handling
         if "youtube" in cmd:
@@ -322,9 +337,9 @@ def health_check():
     return jsonify({
         'status': 'online',
         'message': 'Jack AI is running',
-        'version': '3.1',
-        'mode': 'mobile_first_fixed',
-        'features': ['faq', 'camera', 'browser', 'search', 'applications', 'websites']
+        'version': '3.2',
+        'mode': 'mobile_first_with_camera_save',
+        'features': ['faq', 'camera', 'camera_capture', 'browser', 'search', 'applications', 'websites']
     })
 
 @app.route('/jack/ask', methods=['POST'])
@@ -389,6 +404,9 @@ def process_command():
         
         if 'app' in result:
             response['app'] = result['app']
+        
+        if 'save_to_gallery' in result:
+            response['save_to_gallery'] = result['save_to_gallery']
         
         return jsonify(response)
     
