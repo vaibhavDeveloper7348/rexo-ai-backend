@@ -138,7 +138,17 @@ class JackAssistant:
         """
         cmd = command.lower().strip()
         
-        # Camera commands - WITH SAVE FUNCTIONALITY
+        # ============ NEW: PHOTO CAPTURE COMMANDS ============
+        # Check for photo/picture capture commands FIRST (highest priority)
+        if ("take" in cmd or "click" in cmd or "capture" in cmd or "snap" in cmd) and \
+           ("photo" in cmd or "picture" in cmd or "pic" in cmd or "image" in cmd):
+            return {
+                "action": "CAPTURE_PHOTO",
+                "message": "Capturing photo and saving to gallery",
+                "save_to_gallery": True
+            }
+        
+        # Camera commands
         if "camera" in cmd:
             if "open" in cmd or "start" in cmd:
                 return {
@@ -150,21 +160,13 @@ class JackAssistant:
                     "action": "CLOSE_CAMERA",
                     "message": "Closing camera"
                 }
-            # NEW: Capture/Take photo command
+            # NEW: Camera capture with photo/picture keywords
             elif "capture" in cmd or "take" in cmd or "click" in cmd or "photo" in cmd or "picture" in cmd:
                 return {
                     "action": "CAPTURE_PHOTO",
                     "message": "Capturing photo and saving to gallery",
                     "save_to_gallery": True
                 }
-        
-        # NEW: Direct photo capture commands
-        if ("take" in cmd or "click" in cmd or "capture" in cmd) and ("photo" in cmd or "picture" in cmd or "pic" in cmd):
-            return {
-                "action": "CAPTURE_PHOTO",
-                "message": "Capturing photo and saving to gallery",
-                "save_to_gallery": True
-            }
         
         # YouTube - specific handling
         if "youtube" in cmd:
@@ -337,9 +339,9 @@ def health_check():
     return jsonify({
         'status': 'online',
         'message': 'Jack AI is running',
-        'version': '3.2',
-        'mode': 'mobile_first_with_camera_save',
-        'features': ['faq', 'camera', 'camera_capture', 'browser', 'search', 'applications', 'websites']
+        'version': '3.1_WITH_CAMERA_SAVE',
+        'mode': 'mobile_first_fixed',
+        'features': ['faq', 'camera', 'photo_capture', 'browser', 'search', 'applications', 'websites']
     })
 
 @app.route('/jack/ask', methods=['POST'])
@@ -405,6 +407,7 @@ def process_command():
         if 'app' in result:
             response['app'] = result['app']
         
+        # NEW: Add save_to_gallery flag
         if 'save_to_gallery' in result:
             response['save_to_gallery'] = result['save_to_gallery']
         
