@@ -303,7 +303,7 @@ class JackAssistant:
                 }
         ################################################################################################################################################
         # Timetable commands
-        if "timetable" in cmd or "time table" in cmd or "tt" in cmd:
+        if "timetable" in cmd or "time table" in cmd:
 
             if "applied" in cmd or "science" in cmd:
                 return {
