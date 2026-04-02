@@ -14,6 +14,69 @@ class JackAssistant:
     def __init__(self):
         # Extended FAQ database with all your questions
         self.faqs = {
+            "what is the highest package in gndec": "the highest package reached around 51 lakh per annum in special or off campus drives while on campus packages usually go up to 21 lakh per annum",
+            "what is the average package for cse and it": "the average package for cse and it branches is usually between 4.75 lakh to 6.5 lakh per annum",
+            "what is the median salary of students": "the median salary for btech students is around 4 to 4.75 lakh per annum",
+            "what is the placement percentage in gndec": "the placement percentage is usually between 75 to 85 percent for eligible students",
+            "how many students get placed every year": "around 600 to 650 students get placed in a typical academic session",
+            "which branch has highest placements": "cse and production engineering often achieve very high or near 100 percent placement rates",
+            "what is the average package for mechanical branch": "the average package for mechanical engineering is around 3.5 to 4.5 lakh per annum",
+            "what is the highest package in civil engineering": "civil engineering students usually get top packages between 6 to 10 lakh per annum",
+            "which companies visit gndec for placements": "companies like infosys tcs accenture wipro amazon microsoft ibm and samsung visit the campus",
+            "who are the top mass recruiters": "the major mass recruiters are infosys tcs accenture and wipro",
+            "do big tech companies visit gndec": "yes companies like amazon microsoft ibm samsung and nvidia have recruited students",
+            "which companies visit for mechanical students": "companies like mahindra sml isuzu honda escorts and hero cycles visit for mechanical engineering",
+            "which companies visit for civil engineering": "companies like l and t shapoorji pallonji and acc cement recruit civil students",
+            "which electrical companies visit the campus": "companies like havells power grid and schneider electric recruit electrical students",
+            "what is the eligibility for campus placements": "students become eligible for placements from the 7th semester",
+            "what cgpa is required for placements": "most companies require a minimum cgpa of around 6 to 6.5",
+            "are backlogs allowed in placements": "most companies require students to have zero active backlogs",
+            "does college provide placement training": "yes the training and placement cell provides mock interviews group discussions and aptitude training",
+            "what is the placement process in companies": "the process usually includes aptitude test technical test group discussion technical interview and hr interview",
+            "can core branch students apply for it companies": "yes companies like tcs and infosys allow students from all branches",
+            "does gndec help with off campus placements": "yes the placement cell shares off campus opportunities and pool drive information",
+            "what is one student one job policy": "it means a student can get only one job offer but higher packages may allow another chance",
+            "who is the placement officer of gndec": "the training and placement officer is prof gagandeep singh sodhi",
+            "how can i register for placement drives": "you can register through the official portal tnpgndec dot com",
+            "does college help in resume building": "yes faculty and placement cell help students in preparing and improving resumes",
+            "are internships provided by the college": "yes the college has tie ups with companies for internships and training",
+            "are internships paid": "some internships are paid with stipends while others may be unpaid",
+            "what is the duration of industrial training": "students do 6 weeks training after 4th semester and 6 months training in final year",
+            "what is a pre placement talk": "it is a session where companies explain their job roles salary and work culture before recruitment",
+            "what is the lowest package offered": "the lowest package is usually around 2.4 to 3 lakh per annum",
+            "which sector hires the most students": "the it and software sector hires the highest number of students",
+            "does college support higher studies": "yes departments provide guidance for gate gre and higher education",
+            "does gndec support entrepreneurship": "yes the college supports startups through step program on campus",
+            "are there international placement opportunities": "direct international placements are rare but alumni work in global companies",
+            "does college provide noc for internships": "yes noc is provided for students doing internships in companies",
+            "are there special drives for female students": "yes some companies conduct diversity hiring drives for female students",
+            "what is the trend in placements in recent years": "there is increasing demand for ai ml and cybersecurity roles with higher packages",
+            "who is the principal of the college": "the principal is doctor sehijpal singh who is associated with production engineering and manufacturing processes",
+            "who teaches machine learning in the college": "doctor kiran jyoti teaches machine learning along with data mining and operating systems",
+            "which faculty teaches data mining": "data mining is taught by faculty members like dr kiran jyoti and doctor akshay girdhar",
+            "who teaches software engineering": "doctor kulvinder singh mann teaches software engineering and related IT subjects",
+            "who teaches database management systems": "doctor amit kamra teaches database management systems and image processing",
+            "which faculty is from it department": "faculty like doctor kulvinder singh mann belong to the information technology department",
+            "who teaches digital image processing": "doctor akshay girdhar teaches digital image processing along with data mining",
+            "who handles placement related activities": "faculty like doctor sachin bagga and professor gagandeep singh sodhi are involved in placement coordination and training",
+            "how can i contact a faculty member": "you can contact a faculty member using the contact details provided in the college directory",
+            "what subjects are taught in computer science related departments": "subjects include machine learning data mining operating systems database management and software engineering",
+            "who teaches cyber security": "doctor sachin bagga teaches cyber security and placement training",
+            "how do i find which faculty teaches a specific subject": "you can check the faculty directory which lists subjects taught by each faculty member",
+            "what is the designation of faculty members": "faculty designations include professor associate professor and assistant professor depending on their experience and role",
+            "how are faculty members organized in the college": "faculty members are organized based on their departments such as IT computer science electrical and mechanical",
+            "can one faculty teach multiple subjects": "yes faculty members often teach multiple subjects based on their expertise",
+            "what departments are available in the college": "departments include information technology computer science electrical engineering and mechanical engineering",
+            "who should i contact for subject doubts": "you should contact the faculty member who teaches that subject using the directory information",
+            "how can first year students identify their teachers": "first year students can refer to the college directory or timetable to identify their teachers",
+            "what details are available in faculty directory": "the faculty directory contains name contact designation department and subjects taught",
+            "is placement training provided by faculty": "yes some faculty members provide placement training and guidance to students",
+            "which faculty specializes in both theory and practical subjects": "some faculty teach both theoretical and practical subjects such as software engineering and system design",
+            "how can i choose the right faculty for guidance": "you can choose faculty based on their subjects expertise and experience in that domain",
+            "which faculty can help with project guidance": "faculty teaching subjects like software engineering machine learning and database systems are suitable for project guidance",
+            "who should i approach for career advice": "you can approach faculty involved in placement training or senior professors in your department",
+            "can faculty help with internships": "yes faculty involved in placement and training can guide students for internships",
+            "which subjects are important for placements": "subjects like data structures database management operating systems and machine learning are important for placements",
             "what are the hostel facilities": "guru nanak dev engineering college provides well furnished rooms wifi common room mess gym and 24x7 security",
             "how can i apply for a hostel": "you need to fill out the hostel application form available on the college website or collect it from the hostel office",
             "what are the hostel fees": "fees vary based on room type and facilities it is best to check the official website or contact the hostel office",
@@ -238,7 +301,66 @@ class JackAssistant:
                     "action": "FAQ_ANSWER",
                     "answer": "What do you want me to search for?"
                 }
+        ################################################################################################################################################
+        # Timetable commands
+        if "timetable" in cmd or "time table" in cmd or "tt" in cmd:
+
+            if "applied" in cmd or "science" in cmd:
+                return {
+                    "action": "OPEN_WEBSITE",
+                    "message": "Opening Applied Science timetable",
+                    "url": "https://appsc.gndec.ac.in/time_tables"
+                }
         
+            elif " it " in f" {cmd} " or "information technology" in cmd:
+                return {
+                    "action": "OPEN_WEBSITE",
+                    "message": "Opening IT timetable",
+                    "url": "https://it.gndec.ac.in/?q=node/5"
+                }
+        
+            elif "cse" in cmd or "computer science" in cmd:
+                return {
+                    "action": "OPEN_WEBSITE",
+                    "message": "Opening CSE timetable",
+                    "url": "https://cse.gndec.ac.in/?q=node/5"
+                }
+        
+            elif "ece" in cmd or "electronics" in cmd:
+                return {
+                    "action": "OPEN_WEBSITE",
+                    "message": "Opening ECE timetable",
+                    "url": "https://ece.gndec.ac.in/?q=node/5"
+                }
+        
+            elif "civil" in cmd or " ce " in f" {cmd} ":
+                return {
+                    "action": "OPEN_WEBSITE",
+                    "message": "Opening Civil timetable",
+                    "url": "https://ce.gndec.ac.in/?q=node/5"
+                }
+        
+            elif "mechanical" in cmd or " me " in f" {cmd} ":
+                return {
+                    "action": "OPEN_WEBSITE",
+                    "message": "Opening Mechanical timetable",
+                    "url": "https://me.gndec.ac.in/?q=node/5"
+                }
+        
+            elif "electrical" in cmd or " ee " in f" {cmd} ":
+                return {
+                    "action": "OPEN_WEBSITE",
+                    "message": "Opening Electrical timetable",
+                    "url": "https://ee.gndec.ac.in/?q=node/5"
+                }
+        
+            else:
+                return {
+                    "action": "OPEN_WEBSITE",
+                    "message": "Opening timetable page",
+                    "url": "https://appsc.gndec.ac.in/time_tables"
+                }
+        #########################################################################################################################################
         # Website opening - general pattern
         if "open" in cmd:
             words = cmd.split()
